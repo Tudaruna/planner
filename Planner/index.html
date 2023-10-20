@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<link rel="stylesheet" href="main.css"/>
+	<title>Планировщик задач</title>
+</head>
+<body>
+	<div class="wrapper">
+		<h1 class="title">Список задач</h1>
+		<div class="list-wrapper">
+			<ul id="tasksList" class="tasks-list"></ul>
+		</div>
+		<div class="card">
+			<h3 class="card-header">Добавить новую задачу</h3>
+			<form id="form" class="form">
+				<input type="text" class="form-input" id="taskName" placeholder="Название задачи" required>
+                <input type="text" class="form-input" id="taskDescription" placeholder="Описание задачи" required>
+                <input type="date" class="form-input" id="taskDate" required>
+                <input type="time" class="form-input" id="taskTime" required>
+				<button type="submit" class="form-btn">Добавить</button>
+			</form>
+		</div>
+	</div>
+	<form id="editForm" class="form-edit overlay">
+		<div class="form-wrapper">
+			<div class="form-header">
+				<h2>Редактировать задачу</h2>
+				<button id="btnClose" class="btn-close"></button>
+			</div>
+			<input type="text" class="form-input" id="newTitle" placeholder="Новое название задачи">
+			<input type="text" class="form-input" id="newDescription" placeholder="Новое описание задачи">
+			<input type="date" class="form-input" id="newDate">
+			<input type="time" class="form-input" id="newTime">
+			<button id="saveButton" class="form-btn">Сохранить</button>
+		</div>
+	</form>
+	<script src="index.js"></script>
+</body>
+</html>
